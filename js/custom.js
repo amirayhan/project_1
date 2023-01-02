@@ -1,1 +1,5 @@
-$(function () {});
+$(function () {
+    new VenoBox({
+        selector: ".venobox",
+    });
+});

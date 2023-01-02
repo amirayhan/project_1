@@ -9,6 +9,7 @@ body {
 :root {
     --primary: #14a2d2;
     --secondery: #232940;
+    --hover: #555555;
 }
 a {
     text-decoration: none;
@@ -27,6 +28,7 @@ h6 {
     font-family: "Poppins", sans-serif;
     font-weight: 800;
     color: #232940;
+    margin: 0;
 }
 h1 {
     font-size: 55px;
@@ -54,6 +56,7 @@ p {
     line-height: 30px;
     font-weight: 400;
     color: #9090a0;
+    margin: 0;
 }
 
 .button_2 {
@@ -271,3 +274,82 @@ p {
     color: var(--primary);
 }
 /* resume css end */
+
+/* works css start */
+#works {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+#works .heading {
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--hover);
+}
+#works .heading .work_menu {
+    display: flex;
+    float: right;
+    margin-top: 15px;
+}
+#works .heading .work_menu li {
+    padding-left: 25px;
+}
+#works .heading .work_menu li a {
+    color: var(--secondary);
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+#works .heading .work_menu li a:hover {
+    color: var(--primary);
+}
+#works .work_item {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+#works .work_item img {
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+#works .work_item .overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.731);
+    transform: scale(0.95);
+    opacity: 0;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+#works .work_item .overlay .text {
+}
+#works .work_item .overlay a {
+    float: right;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+#works .work_item .overlay a:hover {
+    color: var(--hover);
+}
+#works .work_item:hover img {
+    transform: scale(1.1);
+}
+#works .work_item:hover .overlay {
+    bottom: 7px;
+    opacity: 1;
+}
+/* works css end */
