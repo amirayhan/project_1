@@ -9,6 +9,7 @@ body {
 :root {
     --primary: #14a2d2;
     --secondery: #232940;
+    --light: #f9f8fe;
     --hover: #555555;
 }
 a {
@@ -17,6 +18,7 @@ a {
 ul,
 ol {
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 h1,
@@ -58,7 +60,23 @@ p {
     color: #9090a0;
     margin: 0;
 }
-
+.button_1 {
+    padding: 15px 25px;
+    font-weight: 600;
+    background: var(--primary);
+    color: #fff;
+    border: 2px solid #fff;
+    display: inline-block;
+    transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+}
+.button_1:hover {
+    color: #fff;
+    background: var(--secondery);
+}
 .button_2 {
     padding: 15px 25px;
     font-weight: 600;
@@ -76,7 +94,6 @@ p {
     color: #fff;
     background: transparent;
 }
-
 .button_3 {
     padding: 15px 25px;
     font-weight: 600;
@@ -193,7 +210,7 @@ p {
 #services {
     padding-top: 120px;
     padding-bottom: 120px;
-    background: #f9f8fe;
+    background: var(--light);
 }
 #services .service_item {
     background: #fff;
@@ -331,19 +348,6 @@ p {
     -ms-transition: all linear 0.3s;
     -o-transition: all linear 0.3s;
 }
-#works .work_item .overlay .text {
-}
-#works .work_item .overlay a {
-    float: right;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -ms-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
-}
-#works .work_item .overlay a:hover {
-    color: var(--hover);
-}
 #works .work_item:hover img {
     transform: scale(1.1);
 }
@@ -352,3 +356,182 @@ p {
     opacity: 1;
 }
 /* works css end */
+
+/* testimonial css start */
+#testimonial {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: var(--secondery);
+    position: relative;
+}
+#testimonial span.quote {
+    position: absolute;
+    top: 35px;
+    left: 100px;
+    font-size: 100px;
+    color: var(--primary);
+    z-index: 10;
+}
+#testimonial .heading {
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgb(141, 141, 141);
+}
+#testimonial .heading h2 {
+    color: #fff;
+}
+#testimonial .heading h3 {
+    color: var(--primary);
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+#testimonial .heading p {
+    color: #fff;
+}
+#testimonial .slider_text .text_item h4 {
+    color: #fff;
+    font-weight: 400;
+}
+#testimonial .slider_text .text_item .name_title {
+    padding: 40px 0;
+}
+#testimonial .slider_text .text_item .name_title h5 {
+    color: var(--primary);
+}
+.slider_text .prev_arrow {
+    position: absolute;
+    right: 12%;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    background: var(--secondery);
+    cursor: pointer;
+    z-index: 100;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+.slider_text .prev_arrow:hover {
+    background: #fff;
+    color: var(--primary);
+}
+.slider_text .next_arrow {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    background: var(--secondery);
+    border: 2px solid #fff;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    z-index: 100;
+    cursor: pointer;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+.slider_text .next_arrow:hover {
+    background: #fff;
+    color: var(--primary);
+}
+/* testimonial css end */
+
+/* blog css start */
+#blog {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+#blog .blog_item {
+    position: relative;
+}
+#blog .blog_item span.date {
+    padding: 10px;
+    background: var(--primary);
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#blog .blog_item h4 {
+    padding-top: 15px;
+}
+#blog .blog_item h4 a {
+    color: var(--secondary);
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+#blog .blog_item:hover h4 a {
+    color: var(--primary);
+}
+/* blog css end */
+
+/* contact css start */
+#contact {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: var(--light);
+}
+#contact .heading h4 {
+    color: var(--primary);
+}
+#contact .heading h2 {
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #9090a0;
+}
+#contact .contact_item {
+    background: #fff;
+    margin-bottom: 30px;
+    position: relative;
+}
+#contact .contact_item span {
+    padding: 5px 20px 0 0;
+    font-size: 40px;
+    color: var(--primary);
+}
+#contact .contact_item span.overlay {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 60px;
+    background: -webkit-linear-gradient(var(--primary), rgba(255, 255, 255, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateY(-50%);
+    opacity: 0.3;
+}
+#contact form {
+    background: #fff;
+}
+#contact form .form-control {
+    border-radius: 0;
+}
+/* contact css end */
+
+/* footer css start */
+#footer {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: var(--secondery);
+}
+/* footer css end */
