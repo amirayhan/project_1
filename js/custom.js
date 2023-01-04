@@ -1,4 +1,33 @@
 $(function () {
+    "use strict";
+
+    // vairable
+    var html_body = $("html,body");
+    var backtotop = $(".back2top");
+    var navbar = $(".navbar");
+
+    // backtotop js
+    backtotop.on("click", function () {
+        html_body.animate({ scrollTop: 0 }, 500);
+    });
+
+    // navbar and backtotop js
+    $(window).on("scroll", function () {
+        var scrolling = $(this).scrollTop();
+
+        if (scrolling > 200) {
+            navbar.addClass("bg");
+        } else {
+            navbar.removeClass("bg");
+        }
+
+        if (scrolling > 300) {
+            backtotop.fadeIn();
+        } else {
+            backtotop.fadeOut();
+        }
+    });
+
     //mixitup js
     var mixer = mixitup(".work_content");
 
